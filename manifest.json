@@ -1,0 +1,32 @@
+{
+    "manifest_version":2,
+    "version":"1.0",
+    "name":"Extension Swirler",
+    "content_scripts":[
+        {
+         "matches":["<all_urls>"],
+         "js":["content.js"],
+         "all_frames": true
+        }
+      ],
+    "icons": {
+        "48": "LarryLurrman.png",
+        "96": "LarryLurrman.png"
+    },
+    "browser_action": {
+        "default_icon": {                
+          "16": "LarryLurrman.png",     
+          "24": "LarryLurrman.png",     
+          "32": "LarryLurrman.png"      
+        },
+        "default_title": "Extension Swirler"
+      },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions":[
+        "activeTab"
+    ],
+    "web_accessible_resources": ["swirly.js"]
+}
